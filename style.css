@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/* Set the UTF-8 character encoding */
+
+/* Base style to reset margins and fill boxes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/**************************Header section***************************/
+
+/* Styles for the header, including the logo and navigation bar */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #00033c;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+#header .logo {
+    width: 100px;
+    margin-right: 50px;
+}
+
+/* Styles for the navigation bar */
+#navbar {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+    display: inline;
+    margin-right: 20px;
+    
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #b5b7ca;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #b5b7ca;
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+}
+
+/*Search section style*/
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.button {
+    padding: 8px 16px;
+    background-color: #555555;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(35, 41, 121);
+}
+
+/****************************Body****************************/
+
+/* Style for H1 */
+h1 {
+    text-align: center;
+    color: #183275;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    text-transform: capitalize;
+    padding: 30px;
+    background: url("../images/background.png") center/700px 100px no-repeat;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+/*********************Form Section*********************/
+.form,
+#success-message1,
+#success-message2,
+.table-container {
+    background-color: #8084a3;
+    border-radius: 5px;
+    width: 70%;
+    margin: 60px auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 40px;
+}
+
+.topic-text {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: white;
+}
+
+.divider {
+    border-top: 3px solid rgb(213, 214, 225);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+}
+
+.input-row {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.input-row span {
+    font: bold 17px Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 7px;
+    display: inline-block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.button2 {
+    margin: 50px 10px 20px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancelB,
+.submit {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cancelB:hover,
+.submit:hover {
+    background-color: #555555;
+}
+
+.submit {
+    background-color: rgb(35, 41, 121);
+    color: white;
+}
+
+.cancelB {
+    background-color: rgb(213, 214, 225);
+}
+
+
+/*******************Table Information*******************/
+.table-container {
+    background-color: #b5b7ca;
+    padding: 40px;
+    width: auto;
+}
+
+/* Estilos para la tabla */
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+    padding: 8px;
+    border: 1px solid #000;
+}
+
+.table-container th {
+    background-color: #8084a3;
+    color: white;
+}
+
+.table-container tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-container tr:hover {
+    background-color: #ddd;
+}
+
+/* Successfully message*/
+.php {
+    min-height: calc(85vh - 150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.php #success-message1,
+.php #success-message2 {
+    padding: 70px;
+    margin: 20px auto;
+    width: 80%;
+    height: 100px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+}
+
+.php #success-message1 {
+    background-color: #616588;
+}
+
+/****************************Footer****************************/
+
+.footer {
+    margin-top: auto;
+    background-color: #00033c;
+    color: #fff;
+    padding: 5px;
+}
+
+.footer footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .logo {
+    width: 40px;
+    margin-right: 50px;
+}
+
+.footer footer p {
+    margin: 0;
+}
+
+/* Icons styles */
+.footer .icon {
+    display: flex;
+}
+
+.footer .icon i {
+    color: #fff;
+    padding-right: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer .icon i:hover {
+    color: #555555;
+}
