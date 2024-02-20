@@ -43,7 +43,7 @@
     <?php
     $servername="localhost";
     $username="root";
-    $password="3152022";
+    $password="dani1234";
     $database="db_techCompany";
     
     //create connetion
