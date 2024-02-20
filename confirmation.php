@@ -42,7 +42,7 @@
     <?php
     $servername="localhost";
     $username="root";
-    $password="3152022";
+    $password="dani1234";
     $database="db_techCompany";
     
     //create connetion
@@ -84,6 +84,11 @@
     $hourly_salary = floatval($_POST['hourly_salary']);;
     $hours_worked = floatval($_POST['work_hours']);
 
+    //Validation
+    if(empty($first_name) && empty($last_name) && empty($email) && empty($position) && empty($hours_worked)) {
+        echo "All fiels are required";
+    }
+    else {
     $insert_data_sql = "INSERT INTO tbl_employee_info (
                             first_name,
                             last_name,
@@ -97,6 +102,7 @@
         echo '<div id="success-message2">Information saved successfully!</div>';
     } else {
         echo "Error inserting data: " . $conn->error;
+    }
     }
 
     $conn->close();
